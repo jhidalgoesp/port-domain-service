@@ -1,0 +1,30 @@
+run:
+  timeout: 10m
+
+output:
+  format: colored-line-number
+
+linters:
+  ena,aleble:
+    - funlen
+    - gocognit
+    - gocritic
+    - godox
+    - gofmt
+    - gosec
+    - lll
+    - whitespace
+    - wsl
+    - depguard
+
+linters-settings:
+  funlen:
+    lines: 100
+    statements: 40
+  gocognit:
+    min-complexity: 25
+  depguard:
+    rules:
+      main:
+        files: 
+        - $all
