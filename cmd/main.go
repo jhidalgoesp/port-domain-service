@@ -45,7 +45,12 @@ func main() {
 
 		// Respond to the request
 		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("Ports updated successfully"))
+		_, err = w.Write([]byte("Ports updated successfully"))
+		if err != nil {
+			log.Println("Error handling request:", err)
+			http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+			return
+		}
 	})
 
 	// Create a channel to listen for termination signals

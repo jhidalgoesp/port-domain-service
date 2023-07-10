@@ -20,8 +20,8 @@ This is an example of a microservice built using hexagonal architecture.
 
 ## Requirements
 
-* [Golang](https://go.dev) 1.20 or higher;
-* [Golanglint-ci](https://golangci-lint.run/) 1.46.2 or higher;
+* [Golang](https://go.dev) 1.20
+* [Golanglint-ci](https://golangci-lint.run/)
 * [Docker](https://www.docker.com/)
 
 ## Commands
